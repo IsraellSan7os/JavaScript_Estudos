@@ -17,3 +17,10 @@ var soma = numero + numero2
 console.log(soma)
 
 console.log("Fim")
+ 
+
+var num = 30 
+var num = 50
+console.log(num)
+
+// O var deixa ser redeclarada a variavel  
