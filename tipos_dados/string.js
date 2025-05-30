@@ -18,3 +18,19 @@ console.log(`Uma string com acentos grasves permite fazer uma formatação
             com varias linhas "Posso usar aspas duplas" e posso usar 
             aspas simples 'Posso usar aspas simples'
     `)
+
+// Tamplates literals (Templates string, interpolação de string)
+
+let usename = "Israel"
+let emial = "israel@gmail.com"
+
+// passar mais de um parâmetro.
+console.log(username, emial)
+
+
+// concatenação de texto
+let mensagem = "Ola " + username + " Seu email é " + emial
+console.log(mensagem)
+
+// templates literals
+let mensagem2 = `Ola ${username} Seu email é ${emial}`
