@@ -33,7 +33,7 @@ form("Isral","santos", "ysraellsanos@gamil.com", "000000000")
 function sum(a,b) {
     let result = a + b
 
-    
+
 
     return result
 
@@ -54,3 +54,59 @@ function subt(a, e, i, o, u) {
 
 let resposta = subt (20, 10, 2, 4, 20 )
 console.log(resposta)
+
+
+// JSDoccomentario da documentação
+
+/**
+ * Authenticates the user
+ * @param {String} email user email.
+ * @param {password} password more than 6 characteres.
+ * @return {Number} user id 
+ */
+function signIn(email = "", password = "") {
+
+    console.log("Email: ", email)
+    console.log("Senha: ", password)
+
+    return 1
+
+}
+
+console.log(signIn("ysraellsanos@gmail.com", "1234565"))
+
+
+/**
+ * 
+ * @param {String} name 
+ * @param {String} lastName 
+ * @param {email} email
+ * @param {string} city
+ * @param {password} Senha 
+
+ */
+function form(name = "", lastName = "", email = "", city = "", Senha){
+    console.log(name, lastName, email, city)
+
+    return ("Loguin feito com sucesso")
+}
+
+
+console.log(form("Israel", "santos", "ysaraellsanosss@gamail.com", "Valentim Gentil", 1234))
+console.log(form("Anne", "santana", "annesantana@gamail.com", "Tobias Barreto", 12345))
+
+//  Função de callback
+
+function execute(taskName, callback) {
+    console.log("Executnado a tarefa", taskName)
+    
+    ranning()
+}
+
+function ranning(){
+    console.log("Tarefa finalizada..")
+
+}
+
+execute("Dowload do arquivo...", ranning)
+
