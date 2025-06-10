@@ -28,17 +28,18 @@ function seleciona() {
     // // retorna o conteudo 
     // // console.log(get.textContent)
 
-    // Acessa o elemento pelo seletor ID
+    // Acessa o elemento pelo Queryseletor ID
     const queryGeuet = document.querySelector("#guest-1")
-    console.log("Query selector pela class", guest)
+    console.log("QuerySelector pela ID", guest)
 
     const queryGeuet1 = document.querySelector(".guest")
-    console.log("Quere selector pelo id", queryGeuet1)
+    console.log("QuerySelector pelo Class", queryGeuet1)
 
 
     const queryGeuetAll = document.querySelectorAll(".guest")
     console.log("Quere selector Retorna todos", queryGeuetAll)
 }
+seleciona()
 
 
 function retorna() {
@@ -58,4 +59,27 @@ function retorna() {
 }
 
 
+function alterandoEstilos() {
 
+    const input = document.querySelector("#name")
+
+    // Adicionando estilo atravez do script
+    input.classList.add("input-error")
+
+    // remove a class de estilo somento a class css e não o elamento html
+    input.classList.remove("input-error")
+
+
+}
+
+function propriedade() {
+    const button = document.querySelector("button")
+    button.style.backgroundColor = "red"
+    button.innerText = "Conectar"
+}
+
+
+ijp
+const selec = document.querySelector(".guest")
+console.log("soçjbvosjvnosvjks", selec)
+console.log(selec.textContent)
