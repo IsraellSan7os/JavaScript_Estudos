@@ -108,11 +108,11 @@ function addNome() {
     newLi.classList.add("guest")
     let newSpan = document.createElement("span")
     newSpan.textContent = "João"
-    
+
     let newSp = document.createElement("span")
     newSp.classList.add("guest")
     newSp.innerText = "Israel"
-    
+
     let newTI = document.createElement("span")
     newTI.classList.add("guest")
     newTI.innerText = "Vitoria"
@@ -127,8 +127,39 @@ function addNome() {
     // newUL.prepend(newSp)
 
     console.log(newUL)
- 
+
 
 }
+
+
+// Eventos
+
+function eventos() {
+    // Ecento de clique
+    const clique = document.querySelector("button")
+
+    clique.addEventListener("click", function (event) {
+        event.preventDefault
+        console.log(clique)
+        // window.alert("Você clicou no botão")
+    })
+
+    const ul = document.querySelector("ul")
+
+    ul.addEventListener("scroll", () => {
+        if (ul.scrollTop > 300) {
+            ul.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+    })
+
+}
+
+
+eventos()
+
+
 
 
