@@ -78,8 +78,57 @@ function propriedade() {
     button.innerText = "Conectar"
 }
 
+function criandoElemento() {
+    // Seleciona a <ul>
+    const pegaElemento = document.querySelector("ul");
 
-ijp
-const selec = document.querySelector(".guest")
-console.log("soçjbvosjvnosvjks", selec)
-console.log(selec.textContent)
+    // Cria o <li>
+    const newGuest = document.createElement("li");
+    newGuest.classList.add("guest");
+
+    // Cria o <span> com o nome
+    const guestContent = document.createElement("span");
+    guestContent.textContent = "Sabrina";
+
+    // Adiciona o <span> dentro do <li>
+    newGuest.append(guestContent);
+
+    // Adiciona o <li> dentro da <ul>
+    pegaElemento.appendChild(newGuest);
+}
+
+criandoElemento();
+
+function addNome() {
+    // Pega o elemento do html
+    const newUL = document.querySelector("ul")
+
+    // criando elemento
+    let newLi = document.createElement("li")
+    newLi.classList.add("guest")
+    let newSpan = document.createElement("span")
+    newSpan.textContent = "João"
+    
+    let newSp = document.createElement("span")
+    newSp.classList.add("guest")
+    newSp.innerText = "Israel"
+    
+    let newTI = document.createElement("span")
+    newTI.classList.add("guest")
+    newTI.innerText = "Vitoria"
+
+
+    // Adiciona dentro do li
+    newLi.append(newSpan, newSp, newTI)
+
+
+    // Adiciona a li dentro da ul
+    newUL.prepend(newLi)
+    // newUL.prepend(newSp)
+
+    console.log(newUL)
+ 
+
+}
+
+
