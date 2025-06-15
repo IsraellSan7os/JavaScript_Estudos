@@ -141,7 +141,7 @@ function eventos() {
     clique.addEventListener("click", function (event) {
         event.preventDefault
         console.log(clique)
-        // window.alert("Você clicou no botão")
+        window.alert("Você clicou no botão")
     })
 
     const ul = document.querySelector("ul")
@@ -157,8 +157,42 @@ function eventos() {
 
 }
 
+// eventos()
 
-eventos()
+function eventKeydow() {
+    // Evento de imput
+
+    const input = document.querySelector("input")
+
+    /* Evento de KeyDow - Quando uma tecla é precionada
+                        - Ele pega todas as teclas que são precionadas
+
+       Evento de Keypress - Quando uma tecla é precionada 
+    */
+
+    input.addEventListener("keypress", function (event) {
+
+        console.log(event.key)
+
+
+    })
+
+      input.addEventListener("keydown", function (event) {
+
+        console.log(event.key)
+
+
+    })
+
+    input.onchange = () =>{
+        // 
+
+        console.log("O Input saio")
+    }
+
+
+}
+eventKeydow()
 
 
 
