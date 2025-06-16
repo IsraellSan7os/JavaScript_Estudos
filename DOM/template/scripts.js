@@ -177,14 +177,14 @@ function eventKeydow() {
 
     })
 
-      input.addEventListener("keydown", function (event) {
+    input.addEventListener("keydown", function (event) {
 
         console.log(event.key)
 
 
     })
 
-    input.onchange = () =>{
+    input.onchange = () => {
         // 
 
         console.log("O Input saio")
@@ -192,7 +192,33 @@ function eventKeydow() {
 
 
 }
-eventKeydow()
+// eventKeydow()
+
+
+// Manipulando valor do input
+function regexr() {
+
+    const input = document.querySelector("input")
+    const fomr = document.querySelector("form")
+
+    input.addEventListener("input", () => {
+
+        const value = input.value
+
+        const regex = /\D+/g
+
+        // Retorna o padrão da string
+        console.log(value.match(regex))
+
+
+        const isValid = regex.test(value)
+        console.log(isValid)
+    })
+    
+
+}
+
+regexr()
 
 
 
