@@ -76,36 +76,53 @@ console.log("Informações do carro:", resultadoCarro);
 
 
 
-function showMessage(num, num1){
+function showMessage(num, num1) {
 
     let n = num + num1
 
     return `A soma entre ${num}  e ${num1} e ${n}`
 }
 
-let resposta = showMessage(10,23)
+let resposta = showMessage(10, 23)
 console.log(resposta)
 
 
-function semana(saldoConta, Pagamento, fatura, deposito, saque){
+function semana(saldoConta, Pagamento, fatura, deposito, saque) {
 
     let extratoConta = saldoConta - fatura
-       
+
     console.log`Pagamento realizado ${extratoConta}`
-    
-    if (saque > saldoConta ) {
+
+    if (saque > saldoConta) {
         return `Valor insuficiente ${saldoConta} disponivel`
     } else {
         return `Saque realizado com suscesso Saldo atual de ${saldoConta}`
     }
-    
 
-    
-  
-        
-        
-    
 }
 
 let resultadoSema = semana("4000", "3000", "200", "150", "400")
 console.log(resultadoSema)
+
+
+
+function fun(menssagem) {
+    console.log("Ola", menssagem)
+    
+
+   
+    function nome(num, numero) {
+
+       var s = num + numero
+       return `Soma dos numero é ${s}`
+        
+    }
+
+ var res = nome(10, 20)
+ console.log(res)
+}
+
+fun("Israel")
+
+
+
