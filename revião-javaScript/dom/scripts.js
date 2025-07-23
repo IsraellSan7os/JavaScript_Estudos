@@ -66,9 +66,12 @@ const manipulandoElementos = function () {
         // toggle
         // Se modo-escuro estiver presente, ele remove. Se não estiver, ele adiciona. Ou seja, alterna.
         list.classList.toggle("erro")
-
    
 
+        // Modificando as propriedade css do elemento.
+        const button = document.querySelector("button")
+        button.style.backgroundColor = "yellow"
+        button.style.color = "black"
     }
 
 
