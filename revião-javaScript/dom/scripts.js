@@ -1,3 +1,5 @@
+const { createElement } = require("react")
+
 const selcionaElemento = function () {
 
     // Visualizando o Dom
@@ -66,7 +68,7 @@ const manipulandoElementos = function () {
         // toggle
         // Se modo-escuro estiver presente, ele remove. Se não estiver, ele adiciona. Ou seja, alterna.
         list.classList.toggle("erro")
-   
+
 
         // Modificando as propriedade css do elemento.
         const button = document.querySelector("button")
@@ -77,6 +79,45 @@ const manipulandoElementos = function () {
 
 }
 
-manipulandoElementos()
+// manipulandoElementos()
+
+
+const criandoELementos = function () {
+
+lista()
+butao()
+sobrenome()
+
+// Criando elementos da lista
+    function lista() {
+        const guest = document.querySelector("ul")
+
+        const newLi = document.createElement("li")
+        newLi.classList.add("guest")
+
+        const newSpan = document.createElement("span")
+        newSpan.textContent = "Israel"
+
+
+        newLi.append(newSpan)
+        guest.append(newLi)
+    }
+
+    function butao(){
+        const form = document.querySelector("form")
+
+        form.style.flexDirection = "column"
+
+        const button = document.createElement("button")
+        button.classList.add("button")
+
+        button.textContent = "Remover"
+        form.append(button)
+        
+    }
+
+}
+
+criandoELementos()
 
 
