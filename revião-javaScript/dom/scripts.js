@@ -1,4 +1,4 @@
-const { createElement } = require("react")
+
 
 const selcionaElemento = function () {
 
@@ -84,11 +84,10 @@ const manipulandoElementos = function () {
 
 const criandoELementos = function () {
 
-lista()
-butao()
-sobrenome()
+    lista()
+    butao()
+    elemetos()
 
-// Criando elementos da lista
     function lista() {
         const guest = document.querySelector("ul")
 
@@ -98,26 +97,55 @@ sobrenome()
         const newSpan = document.createElement("span")
         newSpan.textContent = "Israel"
 
-
         newLi.append(newSpan)
         guest.append(newLi)
     }
 
-    function butao(){
+    function butao() {
         const form = document.querySelector("form")
 
         form.style.flexDirection = "column"
 
         const button = document.createElement("button")
         button.classList.add("button")
-
         button.textContent = "Remover"
+
         form.append(button)
-        
+
     }
 
+
+    function elemetos() {
+
+        criandoParagrafos()
+
+        const ul = document.querySelector("ul")
+
+        const li = document.createElement("li")
+        li.classList.add("guest")
+
+        const span = document.createElement("samp")
+        span.textContent = "Adnael"
+
+        li.append(span)
+        ul.append(li)
+
+        function criandoParagrafos(){
+            
+            const main = document.querySelector("main")
+
+            const p = document.createElement("p")
+            p.textContent = "Hoje é um bom dia pra programar"
+           
+            main.append(p)
+            p.style.color = "#ffff"
+
+        }
+
+    }
 }
 
-criandoELementos()
+// criandoELementos()
+
 
 
