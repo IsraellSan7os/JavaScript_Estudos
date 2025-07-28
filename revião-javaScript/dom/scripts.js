@@ -1,5 +1,5 @@
 
-
+// selcionaElemento()
 const selcionaElemento = function () {
 
     // Visualizando o Dom
@@ -38,9 +38,7 @@ const selcionaElemento = function () {
     console.log("Class ", elementeSelector)
 
 }
-
-
-// selcionaElemento()
+// manipulandoElementos()
 
 
 const manipulandoElementos = function () {
@@ -79,9 +77,9 @@ const manipulandoElementos = function () {
 
 }
 
-// manipulandoElementos()
 
 
+// Criando elemento com o js
 const criandoELementos = function () {
 
     lista()
@@ -130,13 +128,13 @@ const criandoELementos = function () {
         li.append(span)
         ul.append(li)
 
-        function criandoParagrafos(){
-            
+        function criandoParagrafos() {
+
             const main = document.querySelector("main")
 
             const p = document.createElement("p")
             p.textContent = "Hoje é um bom dia pra programar"
-           
+
             main.append(p)
             p.style.color = "#ffff"
 
@@ -144,8 +142,35 @@ const criandoELementos = function () {
 
     }
 }
-
 // criandoELementos()
+
+
+// Manipulando atributos do input
+const manipulandoAtributos = function () {
+
+
+    /*O atributo booleano disabled, quando presente, torna o elemento não mutável, não passível de foco ou mesmo enviado com o formulário. O usuário não pode editar nem dar foco ao controle, nem aos seus descendentes de controle de formulário */
+
+    const input = document.querySelector("input")
+    const button = document.querySelector("button")
+
+
+    // Disabled
+    input.setAttribute("disabled", true)
+    button.setAttribute("disabled",  true)
+
+    // Mudando o type
+    input.setAttribute("type", "file")
+
+    // remove a tributos
+    button.removeAttribute("type", "submit")
+   
+
+}
+
+manipulandoAtributos()
+
+
 
 
 
