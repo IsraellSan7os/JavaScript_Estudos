@@ -157,18 +157,85 @@ const manipulandoAtributos = function () {
 
     // Disabled
     input.setAttribute("disabled", true)
-    button.setAttribute("disabled",  true)
+    button.setAttribute("disabled", true)
 
     // Mudando o type
     input.setAttribute("type", "file")
 
     // remove a tributos
     button.removeAttribute("type", "submit")
-   
+
 
 }
 
-manipulandoAtributos()
+// manipulandoAtributos()
+const adcionadoPessoas = function () {
+    // Adicionado anne
+    const ul = document.querySelector("ul")
+    const li = document.createElement("li")
+    li.classList.add("guest")
+    const span = document.createElement("span")
+    span.textContent = "anne"
+    li.append(span)
+    ul.append(li)
+
+    // Adcionado israel
+    const li1 = document.createElement("li")
+    li1.classList.add("guest")
+    const span1 = document.createElement("span")
+    span1.textContent = "Helena"
+    li1.append(span1)
+    ul.append(li1)
+}
+adcionadoPessoas()
+
+
+const evento = function () {
+
+    // Eventos de click
+    window.addEventListener("click", (event) => {
+        // console.log("A pagina foi recarregada ")
+
+        // console.log(event.target.innerText)
+
+        // Evento que não deixa a pagina recarregar toda hora
+        event.preventDefault()
+
+        // const body = document.querySelector("body")
+
+        // body.style.backgroundColor = "red"
+
+    })
+
+    // Eventos de scroll
+    const ul = document.querySelector("ul")
+
+    ul.addEventListener("scroll", () => {
+
+        if (ul.scrollTop > 460) {
+            // console.log("Fim da lista")
+
+            ul.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+    })
+
+}
+evento()
+
+
+
+    const button = document.querySelector("button")
+
+    button.addEventListener("click", (e) => {
+
+        console.log("Clicou")
+    })
+
+
+
 
 
 
