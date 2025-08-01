@@ -269,7 +269,35 @@ function eventosForm(){
     }
 }
 
-eventosForm()
+// eventosForm()
+
+
+const eventoInput = function(){
+
+  /* keydown - Quando uma tecla e precionada (Captura tudo o que é digitado no teclado
+    incluindo CTR, SHIFT, etc. */ 
+  
+    // #1 Traduzindo - Tecla precionada 
+    // const inputkeydown = document.querySelector("input")
+
+    // inputkeydown.addEventListener("keydown" ,(event) =>{
+    //     event.preventDefault()
+    //     // console.log(event.key)
+    // })
+
+
+    /*keypress Quando um tecla do tipo caracter é precionada (Letra, numero, pornto, etc.)*/
+    // #2
+    let inputKeypress = document.querySelector("input")
+    
+    inputKeypress = addEventListener("keypress" , (event) =>{
+        // event.preventDefault()
+        console.log(event.key)
+    })
+
+}
+
+eventoInput()
 
 
 
