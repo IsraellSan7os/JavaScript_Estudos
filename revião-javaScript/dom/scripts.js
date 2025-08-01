@@ -223,8 +223,10 @@ const evento = function () {
     })
 
 }
-evento()
+// evento()
 
+
+const eventosClick = function(){
 
 
     const button = document.querySelector("button")
@@ -233,6 +235,41 @@ evento()
 
         console.log("Clicou")
     })
+}
+
+/*Exitem 2 forma de fazer os tipos de eventos */
+
+function eventosForm(){
+
+    const fomr = document.querySelector("form")
+
+    // #1
+    fomr.addEventListener("submit" , (event) =>{
+        event.preventDefault()
+        console.log("Você fez um submit no formulario #1")
+    })
+
+        fomr.addEventListener("submit" , (event) =>{
+        event.preventDefault()
+        console.log("Você fez um submit no formulario #2")
+    })
+
+    // #2
+
+    /* Quando usamos esse tipo de evento se addEventListener
+        Ele pega somento o ultimo evento criado */
+    fomr.onsubmit = (event) =>{
+        event.preventDefault()
+        console.log("Você fez um submit no formulario 3#")
+    }
+
+       fomr.onsubmit = (event) =>{
+        event.preventDefault()
+        console.log("Você fez um submit no formulario 4#")
+    }
+}
+
+eventosForm()
 
 
 
