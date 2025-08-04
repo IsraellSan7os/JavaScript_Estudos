@@ -1,4 +1,5 @@
 
+
 // selcionaElemento()
 const selcionaElemento = function () {
 
@@ -226,7 +227,7 @@ const evento = function () {
 // evento()
 
 
-const eventosClick = function(){
+const eventosClick = function () {
 
 
     const button = document.querySelector("button")
@@ -239,17 +240,17 @@ const eventosClick = function(){
 
 /*Exitem 2 forma de fazer os tipos de eventos */
 
-function eventosForm(){
+function eventosForm() {
 
     const fomr = document.querySelector("form")
 
     // #1
-    fomr.addEventListener("submit" , (event) =>{
+    fomr.addEventListener("submit", (event) => {
         event.preventDefault()
         console.log("Você fez um submit no formulario #1")
     })
 
-        fomr.addEventListener("submit" , (event) =>{
+    fomr.addEventListener("submit", (event) => {
         event.preventDefault()
         console.log("Você fez um submit no formulario #2")
     })
@@ -258,12 +259,12 @@ function eventosForm(){
 
     /* Quando usamos esse tipo de evento se addEventListener
         Ele pega somento o ultimo evento criado */
-    fomr.onsubmit = (event) =>{
+    fomr.onsubmit = (event) => {
         event.preventDefault()
         console.log("Você fez um submit no formulario 3#")
     }
 
-       fomr.onsubmit = (event) =>{
+    fomr.onsubmit = (event) => {
         event.preventDefault()
         console.log("Você fez um submit no formulario 4#")
     }
@@ -272,33 +273,154 @@ function eventosForm(){
 // eventosForm()
 
 
-const eventoInput = function(){
+const eventoInput = function () {
 
-  /* keydown - Quando uma tecla e precionada (Captura tudo o que é digitado no teclado
-    incluindo CTR, SHIFT, etc. */ 
-  
+    /* keydown - Quando uma tecla e precionada (Captura tudo o que é digitado no teclado
+      incluindo CTR, SHIFT, etc. */
+
     // #1 Traduzindo - Tecla precionada 
-    // const inputkeydown = document.querySelector("input")
+    const inputkeydown = document.querySelector("input")
 
-    // inputkeydown.addEventListener("keydown" ,(event) =>{
-    //     event.preventDefault()
-    //     // console.log(event.key)
-    // })
+    inputkeydown.addEventListener("keydown", (event) => {
+        event.preventDefault()
+        // console.log(event.key)
+    })
 
 
     /*keypress Quando um tecla do tipo caracter é precionada (Letra, numero, pornto, etc.)*/
     // #2
+
     let inputKeypress = document.querySelector("input")
-    
-    inputKeypress = addEventListener("keypress" , (event) =>{
+
+    inputKeypress = addEventListener("keypress", (event) => {
         // event.preventDefault()
         console.log(event.key)
     })
 
 }
 
-eventoInput()
+// eventoInput()
 
+
+
+const regexr = function () {
+
+    const input = document.querySelector("input")
+
+    input.addEventListener("change", () => {
+
+        const value = input.value
+
+        const regex = /\D+/g
+
+        console.log(value.match(regex))
+
+        const ul = document.querySelector("ul")
+
+        const li = document.createElement("li")
+        li.classList.add("guest")
+
+        const span = document.createElement("span")
+        span.textContent = value
+
+        li.append(span)
+        ul.append(li)
+
+        console.log(value)
+    }
+
+    )
+}
+
+// regexr()
+
+const eventosSubmit = function () {
+
+
+    const input = document.querySelector("input")
+    const form = document.querySelector("form")
+    const button = document.querySelector("button")
+
+
+    button.addEventListener("click", () => {
+
+        // Somente letras
+        const regex = /[^A-Z a-zÀ-ÿ]+/g
+        const value = input.value
+
+        // const value = input.value.replace(regex, "")
+        // console.log(value)
+
+        if (regex.test(value)) {
+
+            window.alert("Valor Invalido!! SOMENTE LETRAS ")
+
+        } else {
+
+            const ul = document.querySelector("ul")
+
+            const li = document.createElement("li")
+            li.classList = ("guest")
+
+            const span = document.createElement("span")
+            span.textContent = value
+
+            li.append(span)
+            ul.prepend(li)
+
+            console.log(value)
+        }
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+        })
+    })
+
+
+}
+
+// eventosSubmit()
+
+
+const revisao = function () {
+    const input = document.querySelector("input")
+    const button = document.querySelector("button")
+    const fomr = document.querySelector("form")
+
+    fomr.addEventListener("submit", (event) =>{
+        event.preventDefault() // // Evita recarregar a página ao submeter
+    })
+
+    button.addEventListener("click", () => {
+        const regex = /[^A-Z a-zÀ-ÿ]+/g // Somente letrase espaços
+        const value = input.value
+
+        if (regex.test(value) || value === "") {
+            const body = document.querySelector("body")
+            const h2 = document.createElement("h2")
+            h2.textContent = "Valor Invalido!! SOMENTE LETRAS"
+            body.prepend(h2)
+
+            h2.style.color = "red"
+            
+
+        } else {
+            const ul = document.querySelector("ul")
+            const li = document.createElement("li")
+            li.classList.add("guest")
+
+            const span = document.createElement("span")
+            span.textContent = value
+
+            li.append(span)
+            ul.prepend(li)
+
+            input.value = ""
+        } 
+    }
+)}
+
+revisao()
 
 
 
