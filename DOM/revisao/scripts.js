@@ -35,4 +35,21 @@ let selectElement = function () {
   console.log(guestsAll)
 }
 
+const manupulandoConteudo = function () {
+  let input = document.querySelector("#name")
+
+  let btn = document.querySelector(".button")
+
+  input.classList.add("input-error");
+  // verifica se a classe existe ela remove se não existe ela adiciona
+  input.classList.toggle("btnn")
+  // adiciona a classe
+  btn.classList.add("btnn")
+  // remove a classe
+  btn.classList.remove("btnn")
+
+
+
+}
+
 
