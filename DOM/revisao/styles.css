@@ -138,7 +138,13 @@ ul {
   border-color: #e21a43;
 }
 
-.btnn{
-  background-color: red;
-  color: black;
+.button-modificado {
+  height: 56px;
+  width: 200px;
+  background-color: #000000;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
 }

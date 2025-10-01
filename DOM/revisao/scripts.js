@@ -48,8 +48,37 @@ const manupulandoConteudo = function () {
   // remove a classe
   btn.classList.remove("btnn")
 
+}
 
+const criandoELemneto = function () {
+  const ul = document.querySelector("ul")
+  const li = document.createElement("li")
+  li.classList.add("guest")
+
+  let span = document.createElement("span")
+  span.textContent = "Anne Santana"
+
+  li.append(span)
+  ul.append(li)
+  console.log(li)
+
+
+  criandoBotao()
+
+  function criandoBotao() {
+    const body = document.querySelector("body")
+    const div = document.createElement("div")
+    const button = document.createElement("button")
+    button.classList.add("button-modificado")
+    button.textContent = "Butão 2"
+
+    div.append(button)
+    body.append(div)
+
+  }
 
 }
+
+criandoELemneto()
 
 
