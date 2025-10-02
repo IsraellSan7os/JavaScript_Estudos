@@ -79,6 +79,16 @@ const criandoELemneto = function () {
 
 }
 
-criandoELemneto()
+const manipulandoAtributos = function () {
+  const input = document.querySelector("#name")
+
+  // Atualizar um atributo
+  input.setAttribute("disabled", true) // desabilita o input
+  input.removeAttribute("disabled", false) // habilita o input
+
+  input.setAttribute("type", "Date") // altera o tipo do input
 
 
+}
+
+manipulandoAtributos()
