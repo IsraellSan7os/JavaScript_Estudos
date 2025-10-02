@@ -91,4 +91,18 @@ const manipulandoAtributos = function () {
 
 }
 
-manipulandoAtributos()
+const eventos = function () {
+  window.addEventListener("load", function () {
+    console.log("A página foi carregada!!")
+  })
+
+  window.addEventListener("click", function(event) {
+    event.preventDefault()
+  //  retorna o elemento que disparou o evento
+    console.log(event.target)
+    // retorna o texto do elemento
+    console.log(event.target.textContent)
+  })
+}
+
+eventos()
