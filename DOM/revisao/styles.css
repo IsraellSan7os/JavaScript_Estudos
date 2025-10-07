@@ -137,14 +137,3 @@ ul {
 .input-error:focus {
   border-color: #e21a43;
 }
-
-.button-modificado {
-  height: 56px;
-  width: 200px;
-  background-color: #000000;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-}

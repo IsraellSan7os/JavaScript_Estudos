@@ -96,13 +96,41 @@ const eventos = function () {
     console.log("A página foi carregada!!")
   })
 
-  window.addEventListener("click", function(event) {
+  window.addEventListener("click", function (event) {
     event.preventDefault()
-  //  retorna o elemento que disparou o evento
-    console.log(event.target)
+    //  retorna o elemento que disparou o evento
+    // console.log(event.target)
     // retorna o texto do elemento
-    console.log(event.target.textContent)
+    // console.log(event.target.textContent)
   })
+
+  let ul = document.querySelector("ul")
+  ul.addEventListener("scroll", (e) => {
+    console.log(e)
+ 
+    if (ul.scrollTop >200) {
+      console.log("Chegou ao final")
+
+      ul.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+
+  })
+
+  const button = document.querySelector("button")
+
+  button.addEventListener("click", (e) => {
+    console.log("Clicou no botão")
+    // ELe so funciona o ultimo evento adicionado
+  })
+
+  button.onclick = function(){
+    console.log("Clicou no botão 1")
+  }
+
+
 }
 
 eventos()
